@@ -1,0 +1,95 @@
+html,body {
+	padding: 0px;
+	margin: 0px;
+}
+header,main {
+	display: block;
+}
+main {
+	margin: 0px auto;
+	width: 900px;
+	padding-top: 60px;
+}
+header {
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #2b2b2b;
+	border-bottom: 1px solid #000;
+}
+
+.achievement {
+	margin-bottom: 10px;
+}
+.achievement:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+.achievement .logo {
+	float: left;
+	width: 102px;
+	height: 102px;
+	position: relative;
+}
+.achievement .logo:after {
+	content: "";
+	display: block;
+	width: 90px;
+	height: 90px;
+	/* скругляем картинку */
+	border-radius: 50%; 
+	/* всё что выходит за границу — отрезаем */
+	overflow: hidden;
+	border: 5px solid #89b8cf;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #f7f5f8;
+	z-index: 1;
+}
+.achievement .logo img {
+	width: 90px;
+	height: 90px;
+	/* скругляем картинку */
+	border-radius: 50%; 
+	/* всё что выходит за границу — отрезаем */
+	overflow: hidden;
+	position: absolute;
+	left: 5px;
+    top: 5px;
+	z-index: 2;
+}
+.achievement .logo .badge {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 5px solid #89b8cf;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	border-radius: 50%;
+	z-index: 3;
+}
+.achievement .logo .badge:empty {
+	display: none;
+}
+.achievement .logo .badge:after {
+	background: #f7f5f8;
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+	margin-top: -30px;
+}
+.achievement .description {
+	float: left;
+	width: 788px;
+	margin-left: 10px;
+}
